@@ -16,6 +16,9 @@
 		FA7086B219F617AE003808AF /* check_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086B119F617AE003808AF /* check_mark.png */; };
 		FA7086B619F6184B003808AF /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086B519F6184B003808AF /* cross.png */; };
 		FA7086B819F61B08003808AF /* Favorite_Add.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086B719F61B08003808AF /* Favorite_Add.png */; };
+		FA7086BA19F6D6F3003808AF /* logo_lt.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086B919F6D6F2003808AF /* logo_lt.png */; };
+		FA7086BC19F746A3003808AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7086BB19F746A3003808AF /* MapKit.framework */; };
+		FA7086BE19F746AA003808AF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7086BD19F746AA003808AF /* Social.framework */; };
 		FAA81C8E19F21ADA00602CD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA81C8D19F21ADA00602CD2 /* Foundation.framework */; };
 		FAA81C9019F21ADA00602CD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA81C8F19F21ADA00602CD2 /* CoreGraphics.framework */; };
 		FAA81C9219F21ADA00602CD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA81C9119F21ADA00602CD2 /* UIKit.framework */; };
@@ -57,6 +60,9 @@
 		FA7086B119F617AE003808AF /* check_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_mark.png; sourceTree = "<group>"; };
 		FA7086B519F6184B003808AF /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		FA7086B719F61B08003808AF /* Favorite_Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favorite_Add.png; sourceTree = "<group>"; };
+		FA7086B919F6D6F2003808AF /* logo_lt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_lt.png; sourceTree = "<group>"; };
+		FA7086BB19F746A3003808AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA7086BD19F746AA003808AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FAA81C8A19F21ADA00602CD2 /* LocateThis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocateThis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA81C8D19F21ADA00602CD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FAA81C8F19F21ADA00602CD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7086BE19F746AA003808AF /* Social.framework in Frameworks */,
+				FA7086BC19F746A3003808AF /* MapKit.framework in Frameworks */,
 				FAA81C9019F21ADA00602CD2 /* CoreGraphics.framework in Frameworks */,
 				FAA81C9219F21ADA00602CD2 /* UIKit.framework in Frameworks */,
 				FAA81C8E19F21ADA00602CD2 /* Foundation.framework in Frameworks */,
@@ -113,6 +121,7 @@
 		FA7086A319F61025003808AF /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				FA7086B919F6D6F2003808AF /* logo_lt.png */,
 				FA7086B719F61B08003808AF /* Favorite_Add.png */,
 				FA7086B519F6184B003808AF /* cross.png */,
 				FA7086B119F617AE003808AF /* check_mark.png */,
@@ -132,6 +141,15 @@
 				FA7086AF19F61596003808AF /* FavoritosViewController.m */,
 			);
 			name = Favoritos;
+			sourceTree = "<group>";
+		};
+		FA7086BF19F750AB003808AF /* Mapa */ = {
+			isa = PBXGroup;
+			children = (
+				FAE736FF19F60EC3004786EC /* MapaViewController.h */,
+				FAE7370019F60EC3004786EC /* MapaViewController.m */,
+			);
+			name = Mapa;
 			sourceTree = "<group>";
 		};
 		FAA81C8119F21ADA00602CD2 = {
@@ -156,6 +174,8 @@
 		FAA81C8C19F21ADA00602CD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA7086BD19F746AA003808AF /* Social.framework */,
+				FA7086BB19F746A3003808AF /* MapKit.framework */,
 				FAA81C8D19F21ADA00602CD2 /* Foundation.framework */,
 				FAA81C8F19F21ADA00602CD2 /* CoreGraphics.framework */,
 				FAA81C9119F21ADA00602CD2 /* UIKit.framework */,
@@ -167,14 +187,15 @@
 		FAA81C9319F21ADA00602CD2 /* LocateThis */ = {
 			isa = PBXGroup;
 			children = (
-				FA7086A319F61025003808AF /* Recursos */,
 				FAA81C9C19F21ADA00602CD2 /* AppDelegate.h */,
 				FAA81C9D19F21ADA00602CD2 /* AppDelegate.m */,
 				FAA81C9F19F21ADA00602CD2 /* Main.storyboard */,
+				FAE7370219F60F01004786EC /* Catalogo */,
 				FA7086AD19F614C0003808AF /* Favoritos */,
 				FAE736FE19F60E85004786EC /* Fotografia */,
 				FAE736FA19F60E51004786EC /* Main/Home */,
-				FAE7370219F60F01004786EC /* Catalogo */,
+				FA7086BF19F750AB003808AF /* Mapa */,
+				FA7086A319F61025003808AF /* Recursos */,
 				FAA81CA819F21ADA00602CD2 /* Images.xcassets */,
 				FAA81C9419F21ADA00602CD2 /* Supporting Files */,
 			);
@@ -224,8 +245,6 @@
 			children = (
 				FAE736FB19F60E80004786EC /* FotoViewController.h */,
 				FAE736FC19F60E80004786EC /* FotoViewController.m */,
-				FAE736FF19F60EC3004786EC /* MapaViewController.h */,
-				FAE7370019F60EC3004786EC /* MapaViewController.m */,
 			);
 			name = Fotografia;
 			sourceTree = "<group>";
@@ -323,6 +342,7 @@
 				FA7086A619F61275003808AF /* camera_icon.png in Resources */,
 				FAA81C9819F21ADA00602CD2 /* InfoPlist.strings in Resources */,
 				FA7086A119F6101D003808AF /* fb_icon.png in Resources */,
+				FA7086BA19F6D6F3003808AF /* logo_lt.png in Resources */,
 				FAA81CA119F21ADA00602CD2 /* Main.storyboard in Resources */,
 				FA7086A719F61275003808AF /* icon_catalog.jpg in Resources */,
 				FA7086B219F617AE003808AF /* check_mark.png in Resources */,

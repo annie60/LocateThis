@@ -1,10 +1,13 @@
 //
-//  MasterViewController.m
+//  FavoritosViewController.m
 //  LocateThis
 //
-//  Created by MacBook on 10/17/14.
+//  Created by DA2 on 10/20/14.
+//  Last updated: 10/21/2014
+//  General Description: Controlador para la sección de catálogo.
+
 //  Copyright (c) 2014 ITESM. All rights reserved.
-//
+////
 
 #import "MasterViewController.h"
 
@@ -26,10 +29,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+//
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
+    [self insertNewObject];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+- (void)insertNewObject
 {
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
@@ -104,9 +108,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        NSDate *object = _objects[indexPath.row];
+//        [[segue destinationViewController] setDetailItem:object];
     }
 }
 

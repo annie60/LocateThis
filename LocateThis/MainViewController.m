@@ -1,10 +1,13 @@
 //
-//  MainViewController.m
+//  FavoritosViewController.m
 //  LocateThis
 //
-//  Created by MacBook on 10/20/14.
+//  Created by DA2 on 10/20/14.
+//  Last updated: 10/21/2014
+//  General Description: Controlador para la sección principal.
+
 //  Copyright (c) 2014 ITESM. All rights reserved.
-//
+////
 
 #import "MainViewController.h"
 
@@ -45,5 +48,9 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(IBAction)unWind:(UIStoryboardSegue *)segue
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

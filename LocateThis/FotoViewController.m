@@ -1,10 +1,13 @@
 //
-//  FotoViewController.m
+//  FavoritosViewController.m
 //  LocateThis
 //
-//  Created by MacBook on 10/20/14.
+//  Created by DA2 on 10/20/14.
+//  Last updated: 10/21/2014
+//  General Description: Controlador para la sección de toma de fotografía.
+
 //  Copyright (c) 2014 ITESM. All rights reserved.
-//
+////
 
 #import "FotoViewController.h"
 
@@ -34,7 +37,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(IBAction)backToPhoto:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"irFoto"]) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }
+}
 /*
 #pragma mark - Navigation
 

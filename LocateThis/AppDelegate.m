@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  LocateThis
 //
-//  Created by MacBook on 10/17/14.
+//  Created by DA2 on 10/17/14.
 //  Copyright (c) 2014 ITESM. All rights reserved.
 //
 
