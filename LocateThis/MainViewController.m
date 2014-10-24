@@ -11,8 +11,13 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
 
+@interface MainViewController ()
+{
+    
+    CLLocationManager *locationManager;
+    
+}
 @end
 
 @implementation MainViewController
@@ -30,6 +35,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    locationManager=[[CLLocationManager alloc]init];
+    [self getLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,5 +59,42 @@
 {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)getLocation{
+    
+    locationManager.delegate=self;
+    locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+    
+    if([CLLocationManager locationServicesEnabled]){
+    [locationManager startUpdatingLocation];
+    }
+}
+#pragma CLLocation Delegate
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    //NSLog(@"didFailWithError: %@", error);
+    
+    UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Error" message:@"Problemas con el GPS" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alert show];
+    self.cameraButton.enabled=false;
+    self.catalogButton.enabled=false;
+    self.favoritesButton.enabled=false;
+    self.posTest.text=@"Porfavor cambie los permisos del GPS";
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    //NSLog(@"didUpdateToLocation: %@", newLocation);
+    self.cameraButton.enabled=true;
+    self.catalogButton.enabled=true;
+    self.favoritesButton.enabled=true;
+    if (newLocation != nil) {
+        NSString *posicion=[NSString stringWithFormat:@"Longitud: %.5f Latitud :%.5f",newLocation.coordinate.longitude,newLocation.coordinate.latitude];
+        self.posTest.text=posicion;
+        
+    }
+    
+    
 }
 @end
