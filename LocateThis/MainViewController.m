@@ -17,6 +17,7 @@
     
     CLLocationManager *locationManager;
     
+    
 }
 @end
 
@@ -86,15 +87,18 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     //NSLog(@"didUpdateToLocation: %@", newLocation);
+  
     self.cameraButton.enabled=true;
     self.catalogButton.enabled=true;
     self.favoritesButton.enabled=true;
+    
     if (newLocation != nil) {
         NSString *posicion=[NSString stringWithFormat:@"Longitud: %.5f Latitud :%.5f",newLocation.coordinate.longitude,newLocation.coordinate.latitude];
         self.posTest.text=posicion;
         
     }
-    
+    self->longitude=newLocation.coordinate.longitude;
+    self->latitude=newLocation.coordinate.latitude;
     
 }
 @end

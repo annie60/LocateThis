@@ -18,7 +18,6 @@
 		FA7086B819F61B08003808AF /* Favorite_Add.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086B719F61B08003808AF /* Favorite_Add.png */; };
 		FA7086BA19F6D6F3003808AF /* logo_lt.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086B919F6D6F2003808AF /* logo_lt.png */; };
 		FA7086BC19F746A3003808AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7086BB19F746A3003808AF /* MapKit.framework */; };
-		FA7086BE19F746AA003808AF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7086BD19F746AA003808AF /* Social.framework */; };
 		FA70870B19F9F8F5003808AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA70870A19F9F8F5003808AF /* CoreLocation.framework */; };
 		FAA81C8E19F21ADA00602CD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA81C8D19F21ADA00602CD2 /* Foundation.framework */; };
 		FAA81C9019F21ADA00602CD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA81C8F19F21ADA00602CD2 /* CoreGraphics.framework */; };
@@ -100,7 +99,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA70870B19F9F8F5003808AF /* CoreLocation.framework in Frameworks */,
-				FA7086BE19F746AA003808AF /* Social.framework in Frameworks */,
 				FA7086BC19F746A3003808AF /* MapKit.framework in Frameworks */,
 				FAA81C9019F21ADA00602CD2 /* CoreGraphics.framework in Frameworks */,
 				FAA81C9219F21ADA00602CD2 /* UIKit.framework in Frameworks */,

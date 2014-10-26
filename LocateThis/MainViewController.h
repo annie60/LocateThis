@@ -12,12 +12,16 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+
 @interface MainViewController : UIViewController<CLLocationManagerDelegate>
+{
+    CLLocationDegrees latitude;
+    CLLocationDegrees longitude;
+}
 @property (strong, nonatomic) IBOutlet UILabel *posTest;
 @property (strong, nonatomic) IBOutlet UIButton *catalogButton;
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 @property (strong, nonatomic) IBOutlet UIButton *favoritesButton;
-
 
 
 @end
