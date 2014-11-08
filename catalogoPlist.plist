@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Vestimenta</key>
+<array>
 	<array>
 		<dict>
 			<key>Display</key>
@@ -23,7 +22,6 @@
 			<string>Child&apos;s clothes</string>
 		</dict>
 	</array>
-	<key>Bebida</key>
 	<array>
 		<dict>
 			<key>Display</key>
@@ -44,7 +42,6 @@
 			<string>Soft drinks</string>
 		</dict>
 	</array>
-	<key>Snacks</key>
 	<array>
 		<dict>
 			<key>Display</key>
@@ -59,7 +56,6 @@
 			<string>Potatoe chips</string>
 		</dict>
 	</array>
-	<key>Entretenimiento</key>
 	<array>
 		<dict>
 			<key>Display</key>
@@ -74,7 +70,6 @@
 			<string>Concerts</string>
 		</dict>
 	</array>
-	<key>Comida</key>
 	<array>
 		<dict>
 			<key>Display</key>
@@ -95,5 +90,5 @@
 			<string>Italian food</string>
 		</dict>
 	</array>
-</dict>
+</array>
 </plist>

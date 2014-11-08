@@ -11,9 +11,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (assign, nonatomic) int detailItem;
 
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 @end
