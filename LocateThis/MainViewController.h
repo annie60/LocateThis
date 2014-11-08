@@ -14,10 +14,7 @@
 
 
 @interface MainViewController : UIViewController<CLLocationManagerDelegate>
-{
-    CLLocationDegrees latitude;
-    CLLocationDegrees longitude;
-}
+
 @property (strong, nonatomic) IBOutlet UILabel *posTest;
 @property (strong, nonatomic) IBOutlet UIButton *catalogButton;
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;

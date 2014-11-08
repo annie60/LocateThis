@@ -8,9 +8,12 @@
 
 //  Copyright (c) 2014 ITESM. All rights reserved.
 ////
-
+#import "PuntoMapa.h"
 #import <UIKit/UIKit.h>
-
-@interface MapaViewController : UIViewController
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+@interface MapaViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate>
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

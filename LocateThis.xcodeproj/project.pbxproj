@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41D9A83C1A0D799600D9FF11 /* catalogoPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */; };
+		63CC99A11A0DFBD700FF6E64 /* PuntoMapa.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CC99A01A0DFBD700FF6E64 /* PuntoMapa.m */; };
 		FA7086A119F6101D003808AF /* fb_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA70869F19F6101D003808AF /* fb_icon.png */; };
 		FA7086A219F6101D003808AF /* twitter_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086A019F6101D003808AF /* twitter_icon.png */; };
 		FA7086A619F61275003808AF /* camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086A419F61275003808AF /* camera_icon.png */; };
@@ -52,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = catalogoPlist.plist; path = ../catalogoPlist.plist; sourceTree = "<group>"; };
+		63CC999F1A0DFBD700FF6E64 /* PuntoMapa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuntoMapa.h; sourceTree = "<group>"; };
+		63CC99A01A0DFBD700FF6E64 /* PuntoMapa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuntoMapa.m; sourceTree = "<group>"; };
 		FA70869F19F6101D003808AF /* fb_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_icon.png; sourceTree = "<group>"; };
 		FA7086A019F6101D003808AF /* twitter_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_icon.png; sourceTree = "<group>"; };
 		FA7086A419F61275003808AF /* camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_icon.png; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 			children = (
 				FAE736FF19F60EC3004786EC /* MapaViewController.h */,
 				FAE7370019F60EC3004786EC /* MapaViewController.m */,
+				63CC999F1A0DFBD700FF6E64 /* PuntoMapa.h */,
+				63CC99A01A0DFBD700FF6E64 /* PuntoMapa.m */,
 			);
 			name = Mapa;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				FAA81C9A19F21ADA00602CD2 /* main.m in Sources */,
 				FAE736F919F60E4B004786EC /* MainViewController.m in Sources */,
 				FAE7370119F60EC3004786EC /* MapaViewController.m in Sources */,
+				63CC99A11A0DFBD700FF6E64 /* PuntoMapa.m in Sources */,
 				FAE736FD19F60E80004786EC /* FotoViewController.m in Sources */,
 				FAA81CA719F21ADA00602CD2 /* DetailViewController.m in Sources */,
 			);

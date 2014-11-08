@@ -253,8 +253,8 @@
                                     <segue destination="I3F-jw-ARD" kind="push" identifier="irFavoritos" id="Rlu-nH-bDc"/>
                                 </connections>
                             </button>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;lat&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha2-SE-jT4">
-                                <rect key="frame" x="7" y="64" width="305" height="21"/>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opt-0m-11U">
+                                <rect key="frame" x="139" y="72" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -268,7 +268,7 @@
                         <outlet property="cameraButton" destination="tg9-do-mzs" id="qjN-rf-GCO"/>
                         <outlet property="catalogButton" destination="x3i-ik-AcV" id="Jc8-rR-l26"/>
                         <outlet property="favoritesButton" destination="Kto-2O-RDH" id="hpq-Ar-Rdc"/>
-                        <outlet property="posTest" destination="ha2-SE-jT4" id="ASh-Bu-1kQ"/>
+                        <outlet property="posTest" destination="opt-0m-11U" id="zqC-XM-RfP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qZ-P1-9Cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -498,7 +498,7 @@
                                 <rect key="frame" x="150" y="285" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-BT-uoO">
+                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-BT-uoO">
                                 <rect key="frame" x="0.0" y="96" width="320" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
@@ -582,6 +582,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Busqueda" id="DCV-fE-fZy"/>
+                    <connections>
+                        <outlet property="mapView" destination="Fzc-BT-uoO" id="VOy-IU-MSc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcN-Ek-VX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="V29-vQ-yKF" userLabel="Exit" sceneMemberID="exit"/>
