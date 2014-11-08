@@ -15,6 +15,7 @@
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
+    NSMutableArray *categorias;
 }
 @end
 
@@ -28,12 +29,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self cargarCategorias];
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 //
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
-    [self insertNewObject];
+    //[self insertNewObject];
+}
+
+- (void) cargarCategorias{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource: @"catalogoPlist" ofType: @"plist"];
+    
+    categorias = [NSMutableDictionary dictionaryWithContentsOfFile:path];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,14 +70,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return categorias.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
+    NSArray *object = categorias[indexPath.row];
     cell.textLabel.text = [object description];
     return cell;
 }

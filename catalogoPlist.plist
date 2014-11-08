@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Vestimenta</key>
+	<array>
+		<dict>
+			<key>Display</key>
+			<string>Ropa para hombres</string>
+			<key>LookUp</key>
+			<string>Men&apos;s clothes</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>Ropa para mujer</string>
+			<key>LookUp</key>
+			<string>Women&apos;s clothes</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>Ropa para infantes</string>
+			<key>LookUp</key>
+			<string>Child&apos;s clothes</string>
+		</dict>
+	</array>
+	<key>Bebida</key>
+	<array>
+		<dict>
+			<key>Display</key>
+			<string>Alcoholicas</string>
+			<key>LookUp</key>
+			<string>Liquor</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>Cafe</string>
+			<key>LookUp</key>
+			<string>Coffe</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>Refrescos</string>
+			<key>LookUp</key>
+			<string>Soft drinks</string>
+		</dict>
+	</array>
+	<key>Snacks</key>
+	<array>
+		<dict>
+			<key>Display</key>
+			<string>Reposteria</string>
+			<key>LookUp</key>
+			<string>Cakes</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>Frituras</string>
+			<key>LookUp</key>
+			<string>Potatoe chips</string>
+		</dict>
+	</array>
+	<key>Entretenimiento</key>
+	<array>
+		<dict>
+			<key>Display</key>
+			<string>Cine</string>
+			<key>LookUp</key>
+			<string>Movie teather</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>Conciertos</string>
+			<key>LookUp</key>
+			<string>Concerts</string>
+		</dict>
+	</array>
+	<key>Comida</key>
+	<array>
+		<dict>
+			<key>Display</key>
+			<string>Mexicana</string>
+			<key>LookUp</key>
+			<string>Mexican food</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>China</string>
+			<key>LookUp</key>
+			<string>Chinese food</string>
+		</dict>
+		<dict>
+			<key>Display</key>
+			<string>Italiana</string>
+			<key>LookUp</key>
+			<string>Italian food</string>
+		</dict>
+	</array>
+</dict>
+</plist>
