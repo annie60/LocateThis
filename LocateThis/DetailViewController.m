@@ -10,6 +10,7 @@
 ////
 
 #import "DetailViewController.h"
+#import "MapaViewController.h"
 
 @interface DetailViewController ()
 //@property (strong, nonatomic) IBOutlet NSArray *pickerArray;
@@ -18,6 +19,8 @@
     NSMutableArray *productos;
      NSMutableArray *productitos;
     NSMutableArray *busqueda;
+    
+    NSString *indice;
 }
 @end
 
@@ -65,6 +68,16 @@
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [productos objectAtIndex:row];
 }
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    indice = busqueda[row];
+    
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"mapita"]) {
+        [[segue destinationViewController] setBusqueda:indice]; // inDICE
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -74,10 +87,10 @@
 {
     if ([[segue identifier] isEqualToString:@"irDetalle"]) {
         
-    [self dismissViewControllerAnimated:YES completion:nil];    
-        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    
     }
     
-    
 }
+
 @end

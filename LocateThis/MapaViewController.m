@@ -36,11 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.mapView.delegate = self;
     
     [self.mapView setShowsUserLocation:YES];
-  
+    
     locationManager = [[CLLocationManager alloc] init];
     
     [locationManager setDelegate:self];
@@ -49,6 +48,9 @@
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     firstLaunch=YES;
+    
+    [self queryGooglePlaces:_busqueda];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,6 +114,8 @@
    
     
     NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=%@&types=%@&sensor=true&key=%@", currentCentre.latitude, currentCentre.longitude, [NSString stringWithFormat:@"%i", currenDist], googleType, kGOOGLE_API_KEY];
+    //NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=%@&types=%@&sensor=true&key=%@", 25.651565, -100.28954, [NSString stringWithFormat:@"%i", 1000], googleType, kGOOGLE_API_KEY];
+    
     
     
     NSURL *googleRequestURL=[NSURL URLWithString:url];
@@ -164,5 +168,14 @@
         return annotationView;
     }
     return nil;
+}
+- (void)setBusqueda:(NSString *)newDetailItem
+{
+    if (_busqueda!= newDetailItem) {
+        _busqueda = newDetailItem;
+
+        // Update the view.
+        
+    }
 }
 @end

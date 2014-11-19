@@ -27,4 +27,4 @@ Authors:
    ITESM students
 	Ana Arellano <a01089996@itesm.mx>
 	Andres Sepulveda
-	David Quilla
+	David Quilla <a01138786@itesm.mx>

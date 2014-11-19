@@ -7,19 +7,19 @@
 			<key>Display</key>
 			<string>Ropa para hombres</string>
 			<key>LookUp</key>
-			<string>Men&apos;s clothes</string>
+			<string>clothing_store</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Ropa para mujer</string>
 			<key>LookUp</key>
-			<string>Women&apos;s clothes</string>
+			<string>clothing_store</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Ropa para infantes</string>
 			<key>LookUp</key>
-			<string>Child&apos;s clothes</string>
+			<string>clothing_store</string>
 		</dict>
 	</array>
 	<array>
@@ -27,19 +27,19 @@
 			<key>Display</key>
 			<string>Alcoholicas</string>
 			<key>LookUp</key>
-			<string>Liquor</string>
+			<string>liquor_store</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Cafe</string>
 			<key>LookUp</key>
-			<string>Coffe</string>
+			<string>cafe</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Refrescos</string>
 			<key>LookUp</key>
-			<string>Soft drinks</string>
+			<string>store</string>
 		</dict>
 	</array>
 	<array>
@@ -47,13 +47,13 @@
 			<key>Display</key>
 			<string>Reposteria</string>
 			<key>LookUp</key>
-			<string>Cakes</string>
+			<string>bakery</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Frituras</string>
 			<key>LookUp</key>
-			<string>Potatoe chips</string>
+			<string>store</string>
 		</dict>
 	</array>
 	<array>

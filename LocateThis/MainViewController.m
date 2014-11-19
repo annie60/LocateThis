@@ -68,7 +68,7 @@
     locationManager.desiredAccuracy=kCLLocationAccuracyBest;
     
     if([CLLocationManager locationServicesEnabled]){
-    //[locationManager startUpdatingLocation];
+     [locationManager startUpdatingLocation];
     }
 }
 #pragma CLLocation Delegate

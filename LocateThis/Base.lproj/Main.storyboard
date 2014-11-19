@@ -369,7 +369,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2Tv-3K-ru3" kind="modal" id="lPe-S0-7PM"/>
+                                    <segue destination="2Tv-3K-ru3" kind="modal" identifier="mapita" id="lPe-S0-7PM"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CF7DAC4B-D691-4598-9C33-7137DD01AE86</string>
+	<string>A382702B-63BC-41BD-958B-93954B85FAA3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>LocateThis</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9B49FEF1-1629-4EC7-8923-C51A12E413CE</key>
+		<key>07AF6422-C748-41AA-9723-237DCB780856</key>
 		<string>https://github.com/annie60/LocateThis.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>LocateThis.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9B49FEF1-1629-4EC7-8923-C51A12E413CE</key>
+		<key>07AF6422-C748-41AA-9723-237DCB780856</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9B49FEF1-1629-4EC7-8923-C51A12E413CE</string>
+	<string>07AF6422-C748-41AA-9723-237DCB780856</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9B49FEF1-1629-4EC7-8923-C51A12E413CE</string>
+			<string>07AF6422-C748-41AA-9723-237DCB780856</string>
 			<key>IDESourceControlWCCName</key>
 			<string>LocateThis</string>
 		</dict>
