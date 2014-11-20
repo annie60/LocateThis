@@ -25,6 +25,6 @@ Authors:
         Ing. Mario Isidro de la Fuente Martínez<mario.delafuente@itesm.mx>
 
    ITESM students
-	Ana Arellano <a01089996@itesm.mx>
-	Andres Sepulveda
+   	Ana Arellano <a01089996@itesm.mx>
+	Andres Sepulveda <a00919739@itesm.mx>
 	David Quilla <a01138786@itesm.mx>
