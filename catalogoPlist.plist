@@ -61,7 +61,7 @@
 			<key>Display</key>
 			<string>Cine</string>
 			<key>LookUp</key>
-			<string>Movie teather</string>
+			<string>movie_teather</string>
 		</dict>
 		<dict>
 			<key>Display</key>
