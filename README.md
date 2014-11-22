@@ -22,7 +22,7 @@ Authors:
 
    ITESM representatives
 	Ing. Martha Sordia Salinas <msordia@itesm.mx>
-        Ing. Mario Isidro de la Fuente Martínez<mario.delafuente@itesm.mx>
+    Ing. Mario Isidro de la Fuente Martínez<mario.delafuente@itesm.mx>
 
    ITESM students
    	Ana Arellano <a01089996@itesm.mx>

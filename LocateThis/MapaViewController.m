@@ -17,7 +17,8 @@
     CLLocationManager *locationManager;
     CLLocationCoordinate2D currentCentre;
     int currenDist;
-     BOOL firstLaunch;
+    BOOL firstLaunch;
+    int primera;
     
 }
 @end
@@ -43,13 +44,13 @@
     locationManager = [[CLLocationManager alloc] init];
     
     [locationManager setDelegate:self];
-    
+    primera=0;
     
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     firstLaunch=YES;
     
-    [self queryGooglePlaces:_busqueda];
+    
     
 }
 
@@ -70,13 +71,13 @@
 #pragma mark - MKMapViewDelegate methods.
 - (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views {
     MKCoordinateRegion region;
-     CLLocationCoordinate2D centre = [mv centerCoordinate];
+    CLLocationCoordinate2D centre = [mv centerCoordinate];
     if (firstLaunch) {
         region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate,1000,1000);
         firstLaunch=NO;
     }else {
         
-    region = MKCoordinateRegionMakeWithDistance(centre,currenDist,currenDist);
+        region = MKCoordinateRegionMakeWithDistance(centre,currenDist,currenDist);
     }
     
     [mv setRegion:region animated:YES];
@@ -93,7 +94,7 @@
     for (int i=0; i<[data count]; i++) {
         
         NSDictionary* place = [data objectAtIndex:i];
-       
+        
         NSDictionary *geo = [place objectForKey:@"geometry"];
         
         NSDictionary *loc = [geo objectForKey:@"location"];
@@ -111,7 +112,7 @@
     }
 }
 -(void) queryGooglePlaces: (NSString *) googleType {
-   
+    
     
     NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=%@&types=%@&sensor=true&key=%@", currentCentre.latitude, currentCentre.longitude, [NSString stringWithFormat:@"%i", currenDist], googleType, kGOOGLE_API_KEY];
     //NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=%@&types=%@&sensor=true&key=%@", 25.651565, -100.28954, [NSString stringWithFormat:@"%i", 1000], googleType, kGOOGLE_API_KEY];
@@ -120,14 +121,14 @@
     
     NSURL *googleRequestURL=[NSURL URLWithString:url];
     
-   
+    
     dispatch_async(kBgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL: googleRequestURL];
         [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
     });
 }
 -(void)fetchedData:(NSData *)responseData {
-   
+    
     NSError* error;
     NSDictionary* json = [NSJSONSerialization
                           JSONObjectWithData:responseData
@@ -141,6 +142,7 @@
     [self plotPositions:places];
 }
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    primera++;
     
     MKMapRect mRect = self.mapView.visibleMapRect;
     MKMapPoint eastMapPoint = MKMapPointMake(MKMapRectGetMinX(mRect), MKMapRectGetMidY(mRect));
@@ -148,8 +150,11 @@
     
     
     currenDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
-   
+    
     currentCentre = self.mapView.centerCoordinate;
+    if(primera==2){
+        [self queryGooglePlaces:_busqueda];
+    }
 }
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     // Define your reuse identifier.
@@ -173,7 +178,7 @@
 {
     if (_busqueda!= newDetailItem) {
         _busqueda = newDetailItem;
-
+        
         // Update the view.
         
     }
