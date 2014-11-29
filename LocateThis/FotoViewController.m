@@ -54,8 +54,8 @@
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([[segue identifier] isEqualToString:@"irMapa"]){
-//
-        }
+        //
+    }
     
 }
 
@@ -92,7 +92,8 @@
     // Get the path to the Documents folder
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDirectoryPath = [paths objectAtIndex:0];
-    // Get the path to an file named "tmp_image.jpg" in the Documents folder
+    //
+    //        // Get the path to an file named "tmp_image.jpg" in the Documents folder
     NSString *imagePath = [documentDirectoryPath stringByAppendingPathComponent:@"tmp_image.jpg"];
     NSURL *imageURL = [NSURL fileURLWithPath:imagePath];
     
@@ -100,11 +101,11 @@
     NSData *imageData = UIImageJPEGRepresentation(self.ImagenFoto.image, 1.0);
     [imageData writeToURL:imageURL atomically:YES];
     
-    NSDictionary* parameters = @{ @"focus[x]": @"480", @"focus[y]": @"640", @"image_request[altitude]": @"27.912109375", @"image_request[language]": @"en", @"image_request[latitude]": @"35.8714220766008", @"image_request[locale]": @"en_US", @"image_request[longitude]": @"14.3583203002251", @"image_request[image]": imageURL};
-
+    
+    NSDictionary* parameters = @{@"focus[x]": @"480", @"focus[y]": @"640", @"image_request[altitude]": @"27.912109375", @"image_request[language]": @"en", @"image_request[latitude]": @"35.8714220766008", @"image_request[locale]": @"en_US", @"image_request[longitude]": @"14.3583203002251", @"image_request[image]": imageURL};
+    
     // And the headers
     NSDictionary* headers = @{@"X-Mashape-Key":@"evGDsuPOjemsh7rcxyGVnnNVZoZJp16Ecurjsno4pspMAHqplY",  @"Content-Type": @"application/x-www-form-urlencoded"};
-    
     NSError *error;
     // Call the API using Unirest
     UNIUrlConnection *asyncConnection = [[UNIRest post:^(UNISimpleRequest *request) {
@@ -120,10 +121,10 @@
         //NSDictionary *datos = [NSJSONSerialization JSONObjectWithData:[response.body.JSONObject objectForKey:@"token"]options:kNilOptions error:&error];
         //NSMutableArray*respuesta =[[NSMutableArray alloc]init];
         //respuesta=[datos objectForKey:@"token"];
-        
         NSDictionary *headers1 = @{@"X-Mashape-Key": @"evGDsuPOjemsh7rcxyGVnnNVZoZJp16Ecurjsno4pspMAHqplY"};
         NSString*liga=[NSString stringWithFormat:@"https://camfind.p.mashape.com/image_responses/%@",[response.body.JSONObject objectForKey:@"token"]];
         UNIUrlConnection *asyncConnection = [[UNIRest get:^(UNISimpleRequest *request) {
+            
             [request setUrl:liga];
             [request setHeaders:headers1];
         }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
@@ -132,9 +133,10 @@
             //UNIJsonNode *body = response.body;
             //NSData *rawBody = response.rawBody;
             NSLog(@"Info %@",response.body.JSONObject);
-            
-            ];
-        
+        }];
     }];
+    
+    
+    
 }
 @end
