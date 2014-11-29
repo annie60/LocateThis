@@ -12,5 +12,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FotoViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *ImagenFoto;
+- (IBAction)buscar:(id)sender;
 
 @end
