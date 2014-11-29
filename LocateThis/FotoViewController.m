@@ -39,7 +39,7 @@
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
         [self presentViewController:picker animated:YES completion:NULL];
-       
+        
     } else {
         UIAlertView *alerta = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"El equipo no tiene camara" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alerta show];
@@ -58,7 +58,6 @@
         }
     
 }
-
 
 #pragma mark UIImagePickerControllerDelegate
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -134,7 +133,9 @@
             //UNIJsonNode *body = response.body;
             //NSData *rawBody = response.rawBody;
             NSLog(@"Info %@",response.body.JSONObject);
-        }];
+            
+            ];
+        
     }];
     
    
