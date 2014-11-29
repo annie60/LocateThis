@@ -15,5 +15,11 @@
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 @interface MapaViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UILabel *palabraBusca;
+- (IBAction)facebook:(id)sender;
+- (IBAction)twitter:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextView *informacion;
+@property (strong, nonatomic) IBOutlet UILabel *nombreLocal;
+- (IBAction)favoritos:(id)sender;
 @property (nonatomic, assign) NSString *busqueda;
 @end

@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		41D9A83C1A0D799600D9FF11 /* catalogoPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */; };
+		6392BC9C1A292A4600C621B3 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC7E1A292A4600C621B3 /* Base64.m */; };
+		6392BC9D1A292A4600C621B3 /* UNIBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC811A292A4600C621B3 /* UNIBaseRequest.m */; };
+		6392BC9E1A292A4600C621B3 /* UNIBodyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC831A292A4600C621B3 /* UNIBodyRequest.m */; };
+		6392BC9F1A292A4600C621B3 /* UNISimpleRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC851A292A4600C621B3 /* UNISimpleRequest.m */; };
+		6392BCA01A292A4600C621B3 /* UNIHTTPBinaryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC881A292A4600C621B3 /* UNIHTTPBinaryResponse.m */; };
+		6392BCA11A292A4600C621B3 /* UNIHTTPJsonResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC8A1A292A4600C621B3 /* UNIHTTPJsonResponse.m */; };
+		6392BCA21A292A4600C621B3 /* UNIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC8C1A292A4600C621B3 /* UNIHTTPResponse.m */; };
+		6392BCA31A292A4600C621B3 /* UNIHTTPStringResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC8E1A292A4600C621B3 /* UNIHTTPStringResponse.m */; };
+		6392BCA41A292A4600C621B3 /* UNIJsonNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC901A292A4600C621B3 /* UNIJsonNode.m */; };
+		6392BCA51A292A4600C621B3 /* UNIHTTPClientHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC921A292A4600C621B3 /* UNIHTTPClientHelper.m */; };
+		6392BCA61A292A4600C621B3 /* UNIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC941A292A4600C621B3 /* UNIHTTPRequest.m */; };
+		6392BCA71A292A4600C621B3 /* UNIHTTPRequestWithBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC961A292A4600C621B3 /* UNIHTTPRequestWithBody.m */; };
+		6392BCA81A292A4600C621B3 /* UNIRest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC991A292A4600C621B3 /* UNIRest.m */; };
+		6392BCA91A292A4600C621B3 /* UNIUrlConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC9B1A292A4600C621B3 /* UNIUrlConnection.m */; };
 		63CC99A11A0DFBD700FF6E64 /* PuntoMapa.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CC99A01A0DFBD700FF6E64 /* PuntoMapa.m */; };
 		FA7086A119F6101D003808AF /* fb_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA70869F19F6101D003808AF /* fb_icon.png */; };
 		FA7086A219F6101D003808AF /* twitter_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7086A019F6101D003808AF /* twitter_icon.png */; };
@@ -53,6 +67,35 @@
 
 /* Begin PBXFileReference section */
 		41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = catalogoPlist.plist; path = ../catalogoPlist.plist; sourceTree = "<group>"; };
+		6392BC7D1A292A4600C621B3 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		6392BC7E1A292A4600C621B3 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		6392BC801A292A4600C621B3 /* UNIBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIBaseRequest.h; sourceTree = "<group>"; };
+		6392BC811A292A4600C621B3 /* UNIBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIBaseRequest.m; sourceTree = "<group>"; };
+		6392BC821A292A4600C621B3 /* UNIBodyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIBodyRequest.h; sourceTree = "<group>"; };
+		6392BC831A292A4600C621B3 /* UNIBodyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIBodyRequest.m; sourceTree = "<group>"; };
+		6392BC841A292A4600C621B3 /* UNISimpleRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNISimpleRequest.h; sourceTree = "<group>"; };
+		6392BC851A292A4600C621B3 /* UNISimpleRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNISimpleRequest.m; sourceTree = "<group>"; };
+		6392BC871A292A4600C621B3 /* UNIHTTPBinaryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPBinaryResponse.h; sourceTree = "<group>"; };
+		6392BC881A292A4600C621B3 /* UNIHTTPBinaryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPBinaryResponse.m; sourceTree = "<group>"; };
+		6392BC891A292A4600C621B3 /* UNIHTTPJsonResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPJsonResponse.h; sourceTree = "<group>"; };
+		6392BC8A1A292A4600C621B3 /* UNIHTTPJsonResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPJsonResponse.m; sourceTree = "<group>"; };
+		6392BC8B1A292A4600C621B3 /* UNIHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPResponse.h; sourceTree = "<group>"; };
+		6392BC8C1A292A4600C621B3 /* UNIHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPResponse.m; sourceTree = "<group>"; };
+		6392BC8D1A292A4600C621B3 /* UNIHTTPStringResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPStringResponse.h; sourceTree = "<group>"; };
+		6392BC8E1A292A4600C621B3 /* UNIHTTPStringResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPStringResponse.m; sourceTree = "<group>"; };
+		6392BC8F1A292A4600C621B3 /* UNIJsonNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIJsonNode.h; sourceTree = "<group>"; };
+		6392BC901A292A4600C621B3 /* UNIJsonNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIJsonNode.m; sourceTree = "<group>"; };
+		6392BC911A292A4600C621B3 /* UNIHTTPClientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPClientHelper.h; sourceTree = "<group>"; };
+		6392BC921A292A4600C621B3 /* UNIHTTPClientHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPClientHelper.m; sourceTree = "<group>"; };
+		6392BC931A292A4600C621B3 /* UNIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPRequest.h; sourceTree = "<group>"; };
+		6392BC941A292A4600C621B3 /* UNIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPRequest.m; sourceTree = "<group>"; };
+		6392BC951A292A4600C621B3 /* UNIHTTPRequestWithBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIHTTPRequestWithBody.h; sourceTree = "<group>"; };
+		6392BC961A292A4600C621B3 /* UNIHTTPRequestWithBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIHTTPRequestWithBody.m; sourceTree = "<group>"; };
+		6392BC971A292A4600C621B3 /* Unirest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unirest-Prefix.pch"; sourceTree = "<group>"; };
+		6392BC981A292A4600C621B3 /* UNIRest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIRest.h; sourceTree = "<group>"; };
+		6392BC991A292A4600C621B3 /* UNIRest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIRest.m; sourceTree = "<group>"; };
+		6392BC9A1A292A4600C621B3 /* UNIUrlConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIUrlConnection.h; sourceTree = "<group>"; };
+		6392BC9B1A292A4600C621B3 /* UNIUrlConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNIUrlConnection.m; sourceTree = "<group>"; };
 		63CC999F1A0DFBD700FF6E64 /* PuntoMapa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuntoMapa.h; sourceTree = "<group>"; };
 		63CC99A01A0DFBD700FF6E64 /* PuntoMapa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuntoMapa.m; sourceTree = "<group>"; };
 		FA70869F19F6101D003808AF /* fb_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_icon.png; sourceTree = "<group>"; };
@@ -124,6 +167,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6392BC7C1A292A4600C621B3 /* Unirest */ = {
+			isa = PBXGroup;
+			children = (
+				6392BC7D1A292A4600C621B3 /* Base64.h */,
+				6392BC7E1A292A4600C621B3 /* Base64.m */,
+				6392BC7F1A292A4600C621B3 /* HttpRequest */,
+				6392BC861A292A4600C621B3 /* HttpResponse */,
+				6392BC911A292A4600C621B3 /* UNIHTTPClientHelper.h */,
+				6392BC921A292A4600C621B3 /* UNIHTTPClientHelper.m */,
+				6392BC931A292A4600C621B3 /* UNIHTTPRequest.h */,
+				6392BC941A292A4600C621B3 /* UNIHTTPRequest.m */,
+				6392BC951A292A4600C621B3 /* UNIHTTPRequestWithBody.h */,
+				6392BC961A292A4600C621B3 /* UNIHTTPRequestWithBody.m */,
+				6392BC971A292A4600C621B3 /* Unirest-Prefix.pch */,
+				6392BC981A292A4600C621B3 /* UNIRest.h */,
+				6392BC991A292A4600C621B3 /* UNIRest.m */,
+				6392BC9A1A292A4600C621B3 /* UNIUrlConnection.h */,
+				6392BC9B1A292A4600C621B3 /* UNIUrlConnection.m */,
+			);
+			path = Unirest;
+			sourceTree = "<group>";
+		};
+		6392BC7F1A292A4600C621B3 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				6392BC801A292A4600C621B3 /* UNIBaseRequest.h */,
+				6392BC811A292A4600C621B3 /* UNIBaseRequest.m */,
+				6392BC821A292A4600C621B3 /* UNIBodyRequest.h */,
+				6392BC831A292A4600C621B3 /* UNIBodyRequest.m */,
+				6392BC841A292A4600C621B3 /* UNISimpleRequest.h */,
+				6392BC851A292A4600C621B3 /* UNISimpleRequest.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		6392BC861A292A4600C621B3 /* HttpResponse */ = {
+			isa = PBXGroup;
+			children = (
+				6392BC871A292A4600C621B3 /* UNIHTTPBinaryResponse.h */,
+				6392BC881A292A4600C621B3 /* UNIHTTPBinaryResponse.m */,
+				6392BC891A292A4600C621B3 /* UNIHTTPJsonResponse.h */,
+				6392BC8A1A292A4600C621B3 /* UNIHTTPJsonResponse.m */,
+				6392BC8B1A292A4600C621B3 /* UNIHTTPResponse.h */,
+				6392BC8C1A292A4600C621B3 /* UNIHTTPResponse.m */,
+				6392BC8D1A292A4600C621B3 /* UNIHTTPStringResponse.h */,
+				6392BC8E1A292A4600C621B3 /* UNIHTTPStringResponse.m */,
+				6392BC8F1A292A4600C621B3 /* UNIJsonNode.h */,
+				6392BC901A292A4600C621B3 /* UNIJsonNode.m */,
+			);
+			path = HttpResponse;
+			sourceTree = "<group>";
+		};
 		FA7086A319F61025003808AF /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +292,7 @@
 		FAA81C9319F21ADA00602CD2 /* LocateThis */ = {
 			isa = PBXGroup;
 			children = (
+				6392BC7C1A292A4600C621B3 /* Unirest */,
 				FAA81C9C19F21ADA00602CD2 /* AppDelegate.h */,
 				FAA81C9D19F21ADA00602CD2 /* AppDelegate.m */,
 				FAA81C9F19F21ADA00602CD2 /* Main.storyboard */,
@@ -379,13 +475,27 @@
 			files = (
 				FA7086B019F61596003808AF /* FavoritosViewController.m in Sources */,
 				FAA81C9E19F21ADA00602CD2 /* AppDelegate.m in Sources */,
+				6392BC9E1A292A4600C621B3 /* UNIBodyRequest.m in Sources */,
+				6392BCA51A292A4600C621B3 /* UNIHTTPClientHelper.m in Sources */,
 				FAA81CA419F21ADA00602CD2 /* MasterViewController.m in Sources */,
+				6392BCA11A292A4600C621B3 /* UNIHTTPJsonResponse.m in Sources */,
 				FAA81C9A19F21ADA00602CD2 /* main.m in Sources */,
+				6392BCA41A292A4600C621B3 /* UNIJsonNode.m in Sources */,
+				6392BCA71A292A4600C621B3 /* UNIHTTPRequestWithBody.m in Sources */,
+				6392BCA61A292A4600C621B3 /* UNIHTTPRequest.m in Sources */,
+				6392BC9F1A292A4600C621B3 /* UNISimpleRequest.m in Sources */,
+				6392BCA21A292A4600C621B3 /* UNIHTTPResponse.m in Sources */,
+				6392BCA01A292A4600C621B3 /* UNIHTTPBinaryResponse.m in Sources */,
 				FAE736F919F60E4B004786EC /* MainViewController.m in Sources */,
+				6392BCA91A292A4600C621B3 /* UNIUrlConnection.m in Sources */,
 				FAE7370119F60EC3004786EC /* MapaViewController.m in Sources */,
+				6392BC9C1A292A4600C621B3 /* Base64.m in Sources */,
+				6392BCA81A292A4600C621B3 /* UNIRest.m in Sources */,
 				63CC99A11A0DFBD700FF6E64 /* PuntoMapa.m in Sources */,
 				FAE736FD19F60E80004786EC /* FotoViewController.m in Sources */,
+				6392BC9D1A292A4600C621B3 /* UNIBaseRequest.m in Sources */,
 				FAA81CA719F21ADA00602CD2 /* DetailViewController.m in Sources */,
+				6392BCA31A292A4600C621B3 /* UNIHTTPStringResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +623,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocateThis/LocateThis-Prefix.pch";
 				INFOPLIST_FILE = "LocateThis/LocateThis-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -526,7 +638,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocateThis/LocateThis-Prefix.pch";
 				INFOPLIST_FILE = "LocateThis/LocateThis-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

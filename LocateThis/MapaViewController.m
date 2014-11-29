@@ -183,4 +183,11 @@
         
     }
 }
+- (IBAction)facebook:(id)sender {
+}
+
+- (IBAction)twitter:(id)sender {
+}
+- (IBAction)favoritos:(id)sender {
+}
 @end
