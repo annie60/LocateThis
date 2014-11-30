@@ -45,6 +45,7 @@
     
     [locationManager setDelegate:self];
     primera=0;
+    self.palabraBusca.text=_categoria;
     
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
@@ -168,6 +169,7 @@
             annotationView.annotation = annotation;
         }
         annotationView.enabled = YES;
+        annotationView.rightCalloutAccessoryView=[UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         annotationView.canShowCallout = YES;
         annotationView.animatesDrop = YES;
         return annotationView;
@@ -183,10 +185,48 @@
         
     }
 }
+
+- (void)setCategoria:(NSString *)newDetailItem
+{
+    if (_categoria!= newDetailItem) {
+        _categoria = newDetailItem;
+        
+        // Update the view.
+        
+    }
+}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    self.nombreLocal.text=view.annotation.title;
+    self.subtitulo.text=view.annotation.subtitle;
+}
+
 - (IBAction)facebook:(id)sender {
+    NSString *strFacebook = [NSString stringWithFormat: @"Encontre a %@ en LocateThis", self.nombreLocal.text];
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]){
+        SLComposeViewController *facebookController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [facebookController setInitialText:strFacebook];
+        
+        [self presentViewController:facebookController animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"Facebook Error" message:@"No esta habilitado facebook en tu dispositivo o no estas conectado a internet" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
 }
 
 - (IBAction)twitter:(id)sender {
+    NSString *strTwitter = [NSString stringWithFormat: @"Encontre a %@ en LocateThis", self.nombreLocal.text];
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]){
+        SLComposeViewController *twitterController=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [twitterController setInitialText:strTwitter];
+        
+        [self presentViewController:twitterController animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"Twitter Error" message:@"No esta habilitado twitter en tu dispositivo o no estas conectado a internet" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
 }
 - (IBAction)favoritos:(id)sender {
 }

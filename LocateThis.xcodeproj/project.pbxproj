@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41711D4B1A2BBCAE00725C02 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7086BD19F746AA003808AF /* Social.framework */; };
 		41D9A83C1A0D799600D9FF11 /* catalogoPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */; };
 		6392BC9C1A292A4600C621B3 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC7E1A292A4600C621B3 /* Base64.m */; };
 		6392BC9D1A292A4600C621B3 /* UNIBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC811A292A4600C621B3 /* UNIBaseRequest.m */; };
@@ -146,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41711D4B1A2BBCAE00725C02 /* Social.framework in Frameworks */,
 				FA70870B19F9F8F5003808AF /* CoreLocation.framework in Frameworks */,
 				FA7086BC19F746A3003808AF /* MapKit.framework in Frameworks */,
 				FAA81C9019F21ADA00602CD2 /* CoreGraphics.framework in Frameworks */,

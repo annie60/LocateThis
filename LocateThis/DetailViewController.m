@@ -21,6 +21,7 @@
     NSMutableArray *busqueda;
     
     NSString *indice;
+    NSString *categoria;
 }
 @end
 
@@ -70,12 +71,16 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     indice = busqueda[row];
+    categoria=productos[row];
+    
     
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"mapita"]) {
-        [[segue destinationViewController] setBusqueda:indice]; // inDICE
+        [[segue destinationViewController] setBusqueda:indice];
+        [[segue destinationViewController] setCategoria:categoria];
+        // inDICE
     }
 }
 - (void)didReceiveMemoryWarning

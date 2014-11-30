@@ -10,6 +10,7 @@
 ////
 #import "PuntoMapa.h"
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
@@ -18,8 +19,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *palabraBusca;
 - (IBAction)facebook:(id)sender;
 - (IBAction)twitter:(id)sender;
-@property (strong, nonatomic) IBOutlet UITextView *informacion;
+@property (strong, nonatomic) IBOutlet UILabel *subtitulo;
 @property (strong, nonatomic) IBOutlet UILabel *nombreLocal;
 - (IBAction)favoritos:(id)sender;
 @property (nonatomic, assign) NSString *busqueda;
+@property (nonatomic, assign) NSString *categoria;
 @end
