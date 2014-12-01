@@ -10,6 +10,7 @@
 ////
 
 #import "MapaViewController.h"
+#import "ApiBD.h"
 #define kGOOGLE_API_KEY @"AIzaSyBppKVBeD433ZeEcimKh35Eiw-yeBPOGIM"
 @interface MapaViewController ()
 {
@@ -38,6 +39,8 @@
 {
     [super viewDidLoad];
     self.mapView.delegate = self;
+    self.subtitulo.hidden=YES;
+    self.nombreLocal.hidden=YES;
     
     [self.mapView setShowsUserLocation:YES];
     
@@ -115,7 +118,7 @@
 -(void) queryGooglePlaces: (NSString *) googleType {
     
     
-    NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=%@&types=%@&sensor=true&key=%@", currentCentre.latitude, currentCentre.longitude, [NSString stringWithFormat:@"%i", currenDist], googleType, kGOOGLE_API_KEY];
+    NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=%@&keyword=%@&sensor=true&key=%@", currentCentre.latitude, currentCentre.longitude, [NSString stringWithFormat:@"%i", currenDist], googleType, kGOOGLE_API_KEY];
     //NSString *url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/search/json?location=%f,%f&radius=%@&types=%@&sensor=true&key=%@", 25.651565, -100.28954, [NSString stringWithFormat:@"%i", 1000], googleType, kGOOGLE_API_KEY];
     
     
@@ -197,8 +200,11 @@
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    
     self.nombreLocal.text=view.annotation.title;
     self.subtitulo.text=view.annotation.subtitle;
+    self.subtitulo.hidden=NO;
+    self.nombreLocal.hidden=NO;
 }
 
 - (IBAction)facebook:(id)sender {
@@ -229,5 +235,14 @@
     }
 }
 - (IBAction)favoritos:(id)sender {
+    [self setServicioBD:[ApiBD getSharedInstance]];
+    [self.servicioBD initWithDatabaseFilename:@"favoritos.db"];
+    [self.servicioBD crearDB];
+    BOOL error=[self.servicioBD addFavorito:self.nombreLocal.text];
+    if (!error) {
+        UIAlertView*mialerta=[[UIAlertView alloc]initWithTitle:@"Exito" message:@"Fue agregado con exito" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [mialerta show];
+    }
+
 }
 @end

@@ -22,5 +22,8 @@
 
 -(void)initWithDatabaseFilename:(NSString *)dbFileName;
 -(BOOL)crearDB;
+-(BOOL)addFavorito:(NSString*)name;
+-(BOOL)removeFavorito:(NSString*)name;
 
+-(NSMutableArray*)findFavorito;
 @end

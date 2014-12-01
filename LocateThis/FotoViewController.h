@@ -14,5 +14,8 @@
 @interface FotoViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *ImagenFoto;
 - (IBAction)buscar:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *palabrabusca;
+@property (weak, nonatomic) IBOutlet UIButton *aceptar;
+@property (weak, nonatomic) IBOutlet UIButton *cancelar;
 
 @end

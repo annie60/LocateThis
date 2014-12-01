@@ -7,19 +7,19 @@
 			<key>Display</key>
 			<string>Ropa para hombres</string>
 			<key>LookUp</key>
-			<string>clothing_store</string>
+			<string>clothing+store+men</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Ropa para mujer</string>
 			<key>LookUp</key>
-			<string>clothing_store</string>
+			<string>clothing+store+women</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Ropa para infantes</string>
 			<key>LookUp</key>
-			<string>clothing_store</string>
+			<string>clothing+store+child</string>
 		</dict>
 	</array>
 	<array>
@@ -27,13 +27,13 @@
 			<key>Display</key>
 			<string>Alcoholicas</string>
 			<key>LookUp</key>
-			<string>liquor_store</string>
+			<string>liquor+store</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Cafe</string>
 			<key>LookUp</key>
-			<string>cafe</string>
+			<string>coffee</string>
 		</dict>
 		<dict>
 			<key>Display</key>
@@ -61,13 +61,13 @@
 			<key>Display</key>
 			<string>Cine</string>
 			<key>LookUp</key>
-			<string>movie_teather</string>
+			<string>movie+teather</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Conciertos</string>
 			<key>LookUp</key>
-			<string>Concerts</string>
+			<string>concerts</string>
 		</dict>
 	</array>
 	<array>
@@ -75,19 +75,19 @@
 			<key>Display</key>
 			<string>Mexicana</string>
 			<key>LookUp</key>
-			<string>Mexican food</string>
+			<string>mexican+food</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>China</string>
 			<key>LookUp</key>
-			<string>Chinese food</string>
+			<string>chinese+food</string>
 		</dict>
 		<dict>
 			<key>Display</key>
 			<string>Italiana</string>
 			<key>LookUp</key>
-			<string>Italian food</string>
+			<string>italian+food</string>
 		</dict>
 	</array>
 </array>

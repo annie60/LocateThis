@@ -15,7 +15,9 @@
 
 #import "FavoritosViewController.h"
 
-@interface FavoritosViewController ()
+@interface FavoritosViewController (){
+    NSMutableArray*favoritos;
+}
 
 @end
 
@@ -33,7 +35,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setServicioBD:[ApiBD getSharedInstance]];
+    [self.servicioBD initWithDatabaseFilename:@"favoritos.db"];
+    [self.servicioBD crearDB];
+    favoritos = [self.servicioBD findFavorito];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,5 +59,31 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma Collection view
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [favoritos count];
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
+    UILabel*label=(UILabel*)[cell viewWithTag:100];
+    label.text=[favoritos objectAtIndex:indexPath.row];
+    return cell;
+}
+
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+-(IBAction)backToFavoritos:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"irMap"]) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }
+    
+}
 
 @end

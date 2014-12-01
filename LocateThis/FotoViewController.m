@@ -11,7 +11,10 @@
 
 #import "FotoViewController.h"
 #import "UNIRest.h"
-@interface FotoViewController ()
+#import "MapaViewController.h"
+@interface FotoViewController (){
+    NSString*palabra;
+}
 
 @end
 
@@ -54,7 +57,7 @@
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([[segue identifier] isEqualToString:@"irMapa"]){
-        //
+            [[segue destinationViewController] setCategoria:palabra];
     }
     
 }
@@ -115,11 +118,11 @@
     }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
         NSInteger code = response.code;
         NSDictionary *responseHeaders = response.headers;
-        UNIJsonNode *body = response.body;
+       UNIJsonNode *body = response.body;
         NSData *rawBody = response.rawBody;
         NSLog(@"Info %@",response.body.JSONObject);
         //NSDictionary *datos = [NSJSONSerialization JSONObjectWithData:[response.body.JSONObject objectForKey:@"token"]options:kNilOptions error:&error];
-        //NSMutableArray*respuesta =[[NSMutableArray alloc]init];
+       // NSMutableArray*respuesta =[[NSMutableArray alloc]init];
         //respuesta=[datos objectForKey:@"token"];
         NSDictionary *headers1 = @{@"X-Mashape-Key": @"evGDsuPOjemsh7rcxyGVnnNVZoZJp16Ecurjsno4pspMAHqplY"};
         NSString*liga=[NSString stringWithFormat:@"https://camfind.p.mashape.com/image_responses/%@",[response.body.JSONObject objectForKey:@"token"]];
@@ -128,15 +131,21 @@
             [request setUrl:liga];
             [request setHeaders:headers1];
         }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
-            //NSInteger code = response.code;
-            //NSDictionary *responseHeaders = response.headers;
-            //UNIJsonNode *body = response.body;
-            //NSData *rawBody = response.rawBody;
+            NSInteger code = response.code;
+            NSDictionary *responseHeaders = response.headers;
+            UNIJsonNode *body = response.body;
+            NSData *rawBody = response.rawBody;
             NSLog(@"Info %@",response.body.JSONObject);
+            
+            palabra=[response.body.JSONObject objectForKey:@"name"];
+           self.palabrabusca.text=palabra;
+           self.aceptar.hidden=NO;
+            self.cancelar.hidden=NO;
         }];
     }];
     
     
     
 }
+
 @end

@@ -11,7 +11,8 @@
 
 
 #import <UIKit/UIKit.h>
+#import "ApiBD.h"
+@interface FavoritosViewController : UICollectionViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 
-@interface FavoritosViewController : UICollectionViewController
-
+@property (strong, nonatomic) ApiBD *servicioBD;
 @end

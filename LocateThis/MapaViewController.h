@@ -12,6 +12,7 @@
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
 #import <MapKit/MapKit.h>
+#import "ApiBD.h"
 #import <CoreLocation/CoreLocation.h>
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 @interface MapaViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate>
@@ -22,6 +23,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *subtitulo;
 @property (strong, nonatomic) IBOutlet UILabel *nombreLocal;
 - (IBAction)favoritos:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *favorito;
 @property (nonatomic, assign) NSString *busqueda;
 @property (nonatomic, assign) NSString *categoria;
+@property (strong, nonatomic) ApiBD *servicioBD;
 @end
