@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		41711D4B1A2BBCAE00725C02 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7086BD19F746AA003808AF /* Social.framework */; };
 		41D9A83C1A0D799600D9FF11 /* catalogoPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */; };
+		638B934E1A2BF95A005B9354 /* ApiBD.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B934D1A2BF95A005B9354 /* ApiBD.m */; };
+		638B93501A2BF993005B9354 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 638B934F1A2BF993005B9354 /* libsqlite3.dylib */; };
 		6392BC9C1A292A4600C621B3 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC7E1A292A4600C621B3 /* Base64.m */; };
 		6392BC9D1A292A4600C621B3 /* UNIBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC811A292A4600C621B3 /* UNIBaseRequest.m */; };
 		6392BC9E1A292A4600C621B3 /* UNIBodyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6392BC831A292A4600C621B3 /* UNIBodyRequest.m */; };
@@ -68,6 +70,9 @@
 
 /* Begin PBXFileReference section */
 		41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = catalogoPlist.plist; path = ../catalogoPlist.plist; sourceTree = "<group>"; };
+		638B934C1A2BF95A005B9354 /* ApiBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiBD.h; sourceTree = "<group>"; };
+		638B934D1A2BF95A005B9354 /* ApiBD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiBD.m; sourceTree = "<group>"; };
+		638B934F1A2BF993005B9354 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6392BC7D1A292A4600C621B3 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		6392BC7E1A292A4600C621B3 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		6392BC801A292A4600C621B3 /* UNIBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNIBaseRequest.h; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638B93501A2BF993005B9354 /* libsqlite3.dylib in Frameworks */,
 				41711D4B1A2BBCAE00725C02 /* Social.framework in Frameworks */,
 				FA70870B19F9F8F5003808AF /* CoreLocation.framework in Frameworks */,
 				FA7086BC19F746A3003808AF /* MapKit.framework in Frameworks */,
@@ -169,6 +175,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		638B934A1A2BF6CA005B9354 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FAA81C9C19F21ADA00602CD2 /* AppDelegate.h */,
+				FAA81C9D19F21ADA00602CD2 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		638B934B1A2BF932005B9354 /* ApiBD */ = {
+			isa = PBXGroup;
+			children = (
+				638B934C1A2BF95A005B9354 /* ApiBD.h */,
+				638B934D1A2BF95A005B9354 /* ApiBD.m */,
+			);
+			name = ApiBD;
+			sourceTree = "<group>";
+		};
 		6392BC7C1A292A4600C621B3 /* Unirest */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +304,7 @@
 		FAA81C8C19F21ADA00602CD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				638B934F1A2BF993005B9354 /* libsqlite3.dylib */,
 				FA70870A19F9F8F5003808AF /* CoreLocation.framework */,
 				FA7086BD19F746AA003808AF /* Social.framework */,
 				FA7086BB19F746A3003808AF /* MapKit.framework */,
@@ -294,15 +319,15 @@
 		FAA81C9319F21ADA00602CD2 /* LocateThis */ = {
 			isa = PBXGroup;
 			children = (
-				6392BC7C1A292A4600C621B3 /* Unirest */,
-				FAA81C9C19F21ADA00602CD2 /* AppDelegate.h */,
-				FAA81C9D19F21ADA00602CD2 /* AppDelegate.m */,
 				FAA81C9F19F21ADA00602CD2 /* Main.storyboard */,
+				FAE736FA19F60E51004786EC /* Main/Home */,
+				638B934A1A2BF6CA005B9354 /* AppDelegate */,
+				6392BC7C1A292A4600C621B3 /* Unirest */,
 				FAE7370219F60F01004786EC /* Catalogo */,
 				FA7086AD19F614C0003808AF /* Favoritos */,
 				FAE736FE19F60E85004786EC /* Fotografia */,
-				FAE736FA19F60E51004786EC /* Main/Home */,
 				FA7086BF19F750AB003808AF /* Mapa */,
+				638B934B1A2BF932005B9354 /* ApiBD */,
 				FA7086A319F61025003808AF /* Recursos */,
 				FAA81CA819F21ADA00602CD2 /* Images.xcassets */,
 				FAA81C9419F21ADA00602CD2 /* Supporting Files */,
@@ -493,6 +518,7 @@
 				FAE7370119F60EC3004786EC /* MapaViewController.m in Sources */,
 				6392BC9C1A292A4600C621B3 /* Base64.m in Sources */,
 				6392BCA81A292A4600C621B3 /* UNIRest.m in Sources */,
+				638B934E1A2BF95A005B9354 /* ApiBD.m in Sources */,
 				63CC99A11A0DFBD700FF6E64 /* PuntoMapa.m in Sources */,
 				FAE736FD19F60E80004786EC /* FotoViewController.m in Sources */,
 				6392BC9D1A292A4600C621B3 /* UNIBaseRequest.m in Sources */,
