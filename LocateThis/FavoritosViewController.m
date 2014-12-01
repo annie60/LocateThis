@@ -14,9 +14,11 @@
 
 
 #import "FavoritosViewController.h"
-
+#import "MapaViewController.h"
 @interface FavoritosViewController (){
     NSMutableArray*favoritos;
+    NSString*busca;
+    NSString* nospacestring;
 }
 
 @end
@@ -49,16 +51,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier]isEqualToString:@"irMap"]) {
+          [[segue destinationViewController] setCategoria:nospacestring];
+        [[segue destinationViewController] setBusqueda:nospacestring];
+    }
 }
-*/
 #pragma Collection view
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return [favoritos count];
@@ -75,6 +78,17 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    busca=[favoritos objectAtIndex:indexPath.row];
+    busca=[busca lowercaseString];
+    NSArray* words = [busca componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    nospacestring = [words componentsJoinedByString:@"+"];
+    [self performSegueWithIdentifier:@"irMap" sender:self];
+    
+    
 }
 -(IBAction)backToFavoritos:(UIStoryboardSegue *)segue
 {

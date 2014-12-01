@@ -116,10 +116,10 @@
         [request setHeaders:headers];
         [request setParameters:parameters];
     }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
-        NSInteger code = response.code;
-        NSDictionary *responseHeaders = response.headers;
+        //NSInteger code = response.code;
+        //NSDictionary *responseHeaders = response.headers;
        UNIJsonNode *body = response.body;
-        NSData *rawBody = response.rawBody;
+       // NSData *rawBody = response.rawBody;
         NSLog(@"Info %@",response.body.JSONObject);
         //NSDictionary *datos = [NSJSONSerialization JSONObjectWithData:[response.body.JSONObject objectForKey:@"token"]options:kNilOptions error:&error];
        // NSMutableArray*respuesta =[[NSMutableArray alloc]init];
