@@ -86,15 +86,13 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
-    UILabel*label=(UILabel*)[cell viewWithTag:100];
-    label.text=[favoritos objectAtIndex:indexPath.row];
+    Cell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
+    cell.label.text=[favoritos objectAtIndex:indexPath.row];
+    //UILabel*label=(UILabel*)[cell viewWithTag:100];
+    //label.text=[favoritos objectAtIndex:indexPath.row];
     
     return cell;
-    /* Cell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
-     cell.delegate = self;
-     return cell;
- */
+    
 
 }
 
@@ -106,7 +104,7 @@
 {
     
     
-    //[self performSegueWithIdentifier:@"irMap" sender:self];
+    [self performSegueWithIdentifier:@"irMap" sender:self];
     
     
 }
