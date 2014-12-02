@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41711D4B1A2BBCAE00725C02 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7086BD19F746AA003808AF /* Social.framework */; };
+		419D82DC1A2D6B3B00C79943 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 419D82DB1A2D6B3B00C79943 /* Cell.m */; };
 		41D9A83C1A0D799600D9FF11 /* catalogoPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */; };
 		638B934E1A2BF95A005B9354 /* ApiBD.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B934D1A2BF95A005B9354 /* ApiBD.m */; };
 		638B93501A2BF993005B9354 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 638B934F1A2BF993005B9354 /* libsqlite3.dylib */; };
@@ -69,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		419D82DA1A2D6B3B00C79943 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		419D82DB1A2D6B3B00C79943 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		41D9A83B1A0D799600D9FF11 /* catalogoPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = catalogoPlist.plist; path = ../catalogoPlist.plist; sourceTree = "<group>"; };
 		638B934C1A2BF95A005B9354 /* ApiBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiBD.h; sourceTree = "<group>"; };
 		638B934D1A2BF95A005B9354 /* ApiBD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiBD.m; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 			children = (
 				FA7086AE19F61596003808AF /* FavoritosViewController.h */,
 				FA7086AF19F61596003808AF /* FavoritosViewController.m */,
+				419D82DA1A2D6B3B00C79943 /* Cell.h */,
+				419D82DB1A2D6B3B00C79943 /* Cell.m */,
 			);
 			name = Favoritos;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				6392BC9E1A292A4600C621B3 /* UNIBodyRequest.m in Sources */,
 				6392BCA51A292A4600C621B3 /* UNIHTTPClientHelper.m in Sources */,
 				FAA81CA419F21ADA00602CD2 /* MasterViewController.m in Sources */,
+				419D82DC1A2D6B3B00C79943 /* Cell.m in Sources */,
 				6392BCA11A292A4600C621B3 /* UNIHTTPJsonResponse.m in Sources */,
 				FAA81C9A19F21ADA00602CD2 /* main.m in Sources */,
 				6392BCA41A292A4600C621B3 /* UNIJsonNode.m in Sources */,

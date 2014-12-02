@@ -15,7 +15,9 @@
 
 #import "FavoritosViewController.h"
 #import "MapaViewController.h"
-@interface FavoritosViewController (){
+#import "Cell.h"
+
+@interface FavoritosViewController ()<MyMenuDelegate>{
     NSMutableArray*favoritos;
     NSString*busca;
     NSString* nospacestring;
@@ -37,6 +39,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.collectionView.delegate = self;
+    
+    UIMenuItem *menuItem = [[UIMenuItem alloc] initWithTitle:@"Eliminar" action:@selector(customAction:)];
+    [[UIMenuController sharedMenuController] setMenuItems:[NSArray arrayWithObject:menuItem]];
+    
+    [self.collectionView registerClass:[Cell class] forCellWithReuseIdentifier:@"celda"];
+
     [self setServicioBD:[ApiBD getSharedInstance]];
     [self.servicioBD initWithDatabaseFilename:@"favoritos.db"];
     [self.servicioBD crearDB];
@@ -80,7 +89,13 @@
     UICollectionViewCell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
     UILabel*label=(UILabel*)[cell viewWithTag:100];
     label.text=[favoritos objectAtIndex:indexPath.row];
+    
     return cell;
+    /* Cell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
+     cell.delegate = self;
+     return cell;
+ */
+
 }
 
 
@@ -104,5 +119,64 @@
     }
     
 }
+
+#pragma mark - UICollectionViewDelegate methods
+- (BOOL)collectionView:(UICollectionView *)collectionView
+      canPerformAction:(SEL)action
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+            withSender:(id)sender {
+    return YES;  // YES for the Cut, copy, paste actions
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView
+shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+         performAction:(SEL)action
+    forItemAtIndexPath:(NSIndexPath *)indexPath
+            withSender:(id)sender {
+    NSLog(@"performAction");
+}
+
+#pragma mark - UIMenuController required methods (Might not be needed on iOS 7)
+- (BOOL)canBecomeFirstResponder {
+    // NOTE: This menu item will not show if this is not YES!
+    return YES;
+}
+
+// NOTE: on iOS 7.0 the message will go to the Cell, not the ViewController. We need a delegate protocol
+//  to send the message back. On iOS 6.0 these methods work without the delegate.
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    NSLog(@"canPerformAction");
+    // The selector(s) should match your UIMenuItem selector
+    if (action == @selector(customAction:)) {
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark - Custom Action(s) for iOS 6.0
+- (void)customAction:(id)sender {
+    NSLog(@"custom action! %@", sender);
+}
+
+// iOS 7.0 custom delegate method for the Cell to pass back a method for what custom button in the UIMenuController was pressed
+- (void)customAction:(id)sender forCell:(Cell *)cell {
+    NSLog(@"custom action on iOS 7.0");
+}
+
+// Delegate methods for UICollectionView... setup the delegate for the UICollectionViewCell
+
+/*- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+{
+    Cell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
+    cell.delegate = self;
+    return cell;
+}*/
+
+
 
 @end
