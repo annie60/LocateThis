@@ -58,7 +58,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier]isEqualToString:@"irMap"]) {
-          [[segue destinationViewController] setCategoria:nospacestring];
+        NSIndexPath *indexpath =[[self.collectionView indexPathsForSelectedItems]lastObject];
+        
+        busca=[favoritos objectAtIndex:indexpath.row];
+        busca=[busca lowercaseString];
+        
+        NSArray* words = [busca componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        nospacestring = [words componentsJoinedByString:@"+"];
+        //nospacestring=[NSString stringWithFormat:@"\"%@\"", nospacestring];
+          [[segue destinationViewController] setCategoria:busca];
         [[segue destinationViewController] setBusqueda:nospacestring];
     }
 }
@@ -82,11 +90,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    busca=[favoritos objectAtIndex:indexPath.row];
-    busca=[busca lowercaseString];
-    NSArray* words = [busca componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    nospacestring = [words componentsJoinedByString:@"+"];
-    [self performSegueWithIdentifier:@"irMap" sender:self];
+    
+    //[self performSegueWithIdentifier:@"irMap" sender:self];
     
     
 }
