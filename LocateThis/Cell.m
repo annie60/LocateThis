@@ -31,13 +31,6 @@
     return self;
 }
 
-// Call our ViewController to do the work, since it has knowledge of the data model, not this view.
-// On iOS 7.0, you'll have to implement this method to make the custom menu appear with a UICollectionViewController
-- (void)customAction:(id)sender {
-    if([self.delegate respondsToSelector:@selector(customAction:forCell:)]) {
-        [self.delegate customAction:sender forCell:self];
-    }
-}
 
 // Must implement this method either here or in the UIViewController
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
@@ -49,6 +42,17 @@
         return YES;
     }
     return NO;
+}
+- (void)customAction:(id)sender {
+    NSLog(@"custom action! %@", sender);
+    UICollectionView* collecitonView=(UICollectionView*)[self superview];
+    if ([collecitonView isKindOfClass:[UICollectionView class]]) {
+        id <UICollectionViewDelegate> d=collecitonView.delegate;
+        if  ([d respondsToSelector:@selector(collectionView:performAction:forItemAtIndexPath:withSender:)]){
+            [d collectionView:collecitonView performAction:@selector(delete:) forItemAtIndexPath:[collecitonView indexPathForCell:self] withSender:sender];
+        }
+    }
+    
 }
 
 - (void)setLabel:(NSString *)newDetailItem

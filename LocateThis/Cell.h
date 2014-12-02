@@ -13,7 +13,7 @@
 @protocol MyMenuDelegate <NSObject>
 
 @optional
-- (void)customAction:(id)sender forCell:(Cell *)cell;
+- (void)customAction:(id)sender;
 @end
 
 @interface Cell : UICollectionViewCell

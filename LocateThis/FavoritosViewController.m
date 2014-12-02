@@ -108,6 +108,7 @@
     
     
 }
+
 -(IBAction)backToFavoritos:(UIStoryboardSegue *)segue
 {
     if ([[segue identifier] isEqualToString:@"irMap"]) {
@@ -123,8 +124,9 @@
       canPerformAction:(SEL)action
     forItemAtIndexPath:(NSIndexPath *)indexPath
             withSender:(id)sender {
-    return YES;  // YES for the Cut, copy, paste actions
+    return NO;  // YES for the Cut, copy, paste actions
 }
+
 
 - (BOOL)collectionView:(UICollectionView *)collectionView
 shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -135,36 +137,18 @@ shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
          performAction:(SEL)action
     forItemAtIndexPath:(NSIndexPath *)indexPath
             withSender:(id)sender {
-    NSLog(@"performAction");
+    [self setServicioBD:[ApiBD getSharedInstance]];
+    [self.servicioBD initWithDatabaseFilename:@"favoritos.db"];
+    [self.servicioBD crearDB];
+    [self.servicioBD removeFavorito:[favoritos objectAtIndex:indexPath.row]];
+    [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
+    [self.collectionView reloadData];
+    
+   
+    
 }
 
-#pragma mark - UIMenuController required methods (Might not be needed on iOS 7)
-- (BOOL)canBecomeFirstResponder {
-    // NOTE: This menu item will not show if this is not YES!
-    return YES;
-}
 
-// NOTE: on iOS 7.0 the message will go to the Cell, not the ViewController. We need a delegate protocol
-//  to send the message back. On iOS 6.0 these methods work without the delegate.
-
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
-    NSLog(@"canPerformAction");
-    // The selector(s) should match your UIMenuItem selector
-    if (action == @selector(customAction:)) {
-        return YES;
-    }
-    return NO;
-}
-
-#pragma mark - Custom Action(s) for iOS 6.0
-- (void)customAction:(id)sender {
-    NSLog(@"custom action! %@", sender);
-}
-
-// iOS 7.0 custom delegate method for the Cell to pass back a method for what custom button in the UIMenuController was pressed
-- (void)customAction:(id)sender forCell:(Cell *)cell {
-    NSLog(@"custom action on iOS 7.0");
-}
 
 // Delegate methods for UICollectionView... setup the delegate for the UICollectionViewCell
 

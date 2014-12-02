@@ -136,11 +136,14 @@
             UNIJsonNode *body = response.body;
             NSData *rawBody = response.rawBody;
             NSLog(@"Info %@",response.body.JSONObject);
-            
+            NSString*status=[response.body.JSONObject objectForKey:@"status"];
             palabra=[response.body.JSONObject objectForKey:@"name"];
+            if (![status isEqualToString:@"Completed"]) {
+                UIAlertView*alerta=[[UIAlertView alloc]initWithTitle:@"Error" message:@"No se pudo realizar la identificación" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+            }else{
            self.palabrabusca.text=palabra;
            self.aceptar.hidden=NO;
-            self.cancelar.hidden=NO;
+                self.cancelar.hidden=NO;}
         }];
     }];
     
