@@ -104,7 +104,7 @@
     NSData *imageData = UIImageJPEGRepresentation(self.ImagenFoto.image, 1.0);
     [imageData writeToURL:imageURL atomically:YES];
     
-    
+    self.palabrabusca.text=@"Buscando...";
     NSDictionary* parameters = @{@"focus[x]": @"480", @"focus[y]": @"640", @"image_request[altitude]": @"27.912109375", @"image_request[language]": @"en", @"image_request[latitude]": @"35.8714220766008", @"image_request[locale]": @"en_US", @"image_request[longitude]": @"14.3583203002251", @"image_request[image]": imageURL};
     
     // And the headers

@@ -21,12 +21,13 @@
         label.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont boldSystemFontOfSize:20.0];
+        
         label.backgroundColor = [UIColor underPageBackgroundColor];
         label.textColor = [UIColor blackColor];
         [self.contentView addSubview:label];
         _label = label;
-        _label.text=@"Hola";
-        label.text=@"Hola";
+        //_label.text=@"Hola";
+        //label.text=@"Hola";
         self.contentView.layer.borderWidth = 1.0f;
         self.contentView.layer.borderColor = [UIColor whiteColor].CGColor;
     }
