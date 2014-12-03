@@ -109,7 +109,7 @@
     
     // And the headers
     NSDictionary* headers = @{@"X-Mashape-Key":@"evGDsuPOjemsh7rcxyGVnnNVZoZJp16Ecurjsno4pspMAHqplY",  @"Content-Type": @"application/x-www-form-urlencoded"};
-    NSError *error;
+    //NSError *error;
     // Call the API using Unirest
     UNIUrlConnection *asyncConnection = [[UNIRest post:^(UNISimpleRequest *request) {
         [request setUrl:@"https://camfind.p.mashape.com/image_requests"];
@@ -118,7 +118,7 @@
     }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
         //NSInteger code = response.code;
         //NSDictionary *responseHeaders = response.headers;
-       UNIJsonNode *body = response.body;
+       //UNIJsonNode *body = response.body;
        // NSData *rawBody = response.rawBody;
         NSLog(@"Info %@",response.body.JSONObject);
         //NSDictionary *datos = [NSJSONSerialization JSONObjectWithData:[response.body.JSONObject objectForKey:@"token"]options:kNilOptions error:&error];
@@ -131,15 +131,16 @@
             [request setUrl:liga];
             [request setHeaders:headers1];
         }] asJsonAsync:^(UNIHTTPJsonResponse *response, NSError *error) {
-            NSInteger code = response.code;
-            NSDictionary *responseHeaders = response.headers;
-            UNIJsonNode *body = response.body;
-            NSData *rawBody = response.rawBody;
+            //NSInteger code = response.code;
+            //NSDictionary *responseHeaders = response.headers;
+            //UNIJsonNode *body = response.body;
+            //NSData *rawBody = response.rawBody;
             NSLog(@"Info %@",response.body.JSONObject);
             NSString*status=[response.body.JSONObject objectForKey:@"status"];
             palabra=[response.body.JSONObject objectForKey:@"name"];
             if (![status isEqualToString:@"Completed"]) {
-                UIAlertView*alerta=[[UIAlertView alloc]initWithTitle:@"Error" message:@"No se pudo realizar la identificación" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+                UIAlertView*alerta=[[UIAlertView alloc]initWithTitle:@"Error" message:@"No se pudo realizar la identificación, intente denuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
+                [alerta show];
             }else{
            self.palabrabusca.text=palabra;
            self.aceptar.hidden=NO;

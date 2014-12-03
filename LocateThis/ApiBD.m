@@ -2,10 +2,12 @@
 //  ApiBD.m
 //  LocateThis
 //
-//  Created by David Quilla on 30/11/14.
-//  Copyright (c) 2014 ITESM. All rights reserved.
-//
+//  Created by DA2 on 10/20/14.
+//  Last updated: 12/01/2014
+//  General Description: Controlador para la BASE DE DATOS.
 
+//  Copyright (c) 2014 ITESM. All rights reserved.
+////
 #import "ApiBD.h"
 
 @implementation ApiBD

@@ -2,9 +2,12 @@
 //  Cell.h
 //  LocateThis
 //
-//  Created by andres on 12/1/14.
+//  Created by DA2 on 10/20/14.
+//  Last updated: 12/01/2014
+//  General Description: Controlador para la celda.
+
 //  Copyright (c) 2014 ITESM. All rights reserved.
-//
+////
 
 #import <UIKit/UIKit.h>
 

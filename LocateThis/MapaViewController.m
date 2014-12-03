@@ -41,7 +41,7 @@
     self.mapView.delegate = self;
     self.subtitulo.hidden=YES;
     self.nombreLocal.hidden=YES;
-    
+    self.favorito.enabled=NO;
     [self.mapView setShowsUserLocation:YES];
     
     locationManager = [[CLLocationManager alloc] init];
@@ -205,6 +205,7 @@
     self.subtitulo.text=view.annotation.subtitle;
     self.subtitulo.hidden=NO;
     self.nombreLocal.hidden=NO;
+     self.favorito.enabled=YES;
 }
 
 - (IBAction)facebook:(id)sender {

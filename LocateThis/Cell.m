@@ -2,10 +2,12 @@
 //  Cell.m
 //  LocateThis
 //
-//  Created by andres on 12/1/14.
-//  Copyright (c) 2014 ITESM. All rights reserved.
-//
+//  Created by DA2 on 10/20/14.
+//  Last updated: 12/01/2014
+//  General Description: Controlador para la celda.
 
+//  Copyright (c) 2014 ITESM. All rights reserved.
+////
 #import "Cell.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -34,17 +36,14 @@
 
 // Must implement this method either here or in the UIViewController
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
-    NSLog(@"canPerformAction");
-    // The selector(s) should match your UIMenuItem selector
-    
-    NSLog(@"Sender: %@", sender);
+   
     if (action == @selector(customAction:)) {
         return YES;
     }
     return NO;
 }
 - (void)customAction:(id)sender {
-    NSLog(@"custom action! %@", sender);
+    
     UICollectionView* collecitonView=(UICollectionView*)[self superview];
     if ([collecitonView isKindOfClass:[UICollectionView class]]) {
         id <UICollectionViewDelegate> d=collecitonView.delegate;

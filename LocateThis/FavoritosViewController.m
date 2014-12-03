@@ -81,16 +81,18 @@
 }
 #pragma Collection view
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
     return [favoritos count];
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+   
     Cell*cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"celda" forIndexPath:indexPath];
     cell.label.text=[favoritos objectAtIndex:indexPath.row];
     //UILabel*label=(UILabel*)[cell viewWithTag:100];
     //label.text=[favoritos objectAtIndex:indexPath.row];
-    
+   
     return cell;
     
 
@@ -141,12 +143,11 @@ shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
     [self.servicioBD initWithDatabaseFilename:@"favoritos.db"];
     [self.servicioBD crearDB];
     [self.servicioBD removeFavorito:[favoritos objectAtIndex:indexPath.row]];
-    [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
-    [self.collectionView reloadData];
-    
-   
-    
-}
+     favoritos = [self.servicioBD findFavorito];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.collectionView reloadData];
+    });
+     }
 
 
 
