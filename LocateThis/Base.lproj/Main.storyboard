@@ -73,7 +73,7 @@
                                     <segue destination="Q9y-YV-xWt" kind="modal" identifier="irMapa" id="zvB-rB-Kzh"/>
                                 </connections>
                             </button>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_3528.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-SS-fdf">
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-SS-fdf">
                                 <rect key="frame" x="0.0" y="66" width="320" height="318"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -643,7 +643,6 @@
     </scenes>
     <resources>
         <image name="Favorite_Add.png" width="256" height="256"/>
-        <image name="IMG_3528.JPG" width="490" height="653"/>
         <image name="camera_icon.png" width="512" height="512"/>
         <image name="check_mark.png" width="7855" height="7040"/>
         <image name="fb_icon.png" width="325" height="325"/>
