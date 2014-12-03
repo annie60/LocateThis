@@ -64,7 +64,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7F-Gd-ukT">
-                                <rect key="frame" x="131" y="468" width="49" height="30"/>
+                                <rect key="frame" x="58" y="424" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="check_mark.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,12 +73,12 @@
                                     <segue destination="Q9y-YV-xWt" kind="modal" identifier="irMapa" id="zvB-rB-Kzh"/>
                                 </connections>
                             </button>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-SS-fdf">
-                                <rect key="frame" x="0.0" y="66" width="320" height="344"/>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_3528.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="Ewb-SS-fdf">
+                                <rect key="frame" x="0.0" y="66" width="320" height="318"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-a3-oab">
-                                <rect key="frame" x="72" y="418" width="49" height="30"/>
+                                <rect key="frame" x="58" y="401" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Buscar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,7 +88,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="148" translatesAutoresizingMaskIntoConstraints="NO" id="3TI-cV-euf">
-                                <rect key="frame" x="146" y="410" width="148" height="44"/>
+                                <rect key="frame" x="147" y="401" width="148" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -138,6 +138,9 @@
                                 <state key="normal" backgroundImage="fb_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebook:" destination="Q9y-YV-xWt" eventType="touchUpInside" id="hFp-lY-DWC"/>
+                                </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rI8-Pr-NSd">
                                 <rect key="frame" x="217" y="446" width="39" height="30"/>
@@ -145,6 +148,9 @@
                                 <state key="normal" backgroundImage="twitter_icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="twitter:" destination="Q9y-YV-xWt" eventType="touchUpInside" id="fOh-ap-371"/>
+                                </connections>
                             </button>
                             <view appearanceType="aqua" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKu-D0-KUu">
                                 <rect key="frame" x="6" y="342" width="305" height="96"/>
@@ -158,14 +164,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="&lt;informacion&gt;" translatesAutoresizingMaskIntoConstraints="NO" id="Kar-vc-oHa">
-                                        <rect key="frame" x="0.0" y="28" width="305" height="68"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
-                                    </textView>
                                     <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BY-Mg-xhJ">
                                         <rect key="frame" x="224" y="0.0" width="38" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -173,9 +171,22 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="favoritos:" destination="Q9y-YV-xWt" eventType="touchUpInside" id="8SZ-DA-XHD"/>
+                                            <action selector="favoritos:" destination="Q9y-YV-xWt" eventType="touchUpInside" id="tKj-cg-7rW"/>
                                         </connections>
                                     </button>
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZtD-7D-hyE">
+                                        <rect key="frame" x="-63" y="75" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNf-Hv-WEH">
+                                        <rect key="frame" x="11" y="38" width="257" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -194,7 +205,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="uIN-Ul-AKh" kind="unwind" unwindAction="backToPhoto:" id="4rW-fT-4FB"/>
+                                                    <segue destination="uIN-Ul-AKh" kind="unwind" unwindAction="unWind:" id="U7t-JO-IUY"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -206,7 +217,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Busqueda" id="PTg-Jl-1Gu"/>
                     <connections>
-                        <outlet property="favorito" destination="5BY-Mg-xhJ" id="rSP-3x-PvQ"/>
+                        <outlet property="favorito" destination="5BY-Mg-xhJ" id="ZJn-Uz-guq"/>
+                        <outlet property="mapView" destination="tnL-Gd-7u4" id="l8V-bu-rm0"/>
+                        <outlet property="nombreLocal" destination="KBl-lL-C1X" id="OAq-RD-5Pz"/>
+                        <outlet property="palabraBusca" destination="CMc-r0-JTL" id="I3Y-xd-pPV"/>
+                        <outlet property="subtitulo" destination="YNf-Hv-WEH" id="A7y-UT-7TF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFW-vv-lyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -628,6 +643,7 @@
     </scenes>
     <resources>
         <image name="Favorite_Add.png" width="256" height="256"/>
+        <image name="IMG_3528.JPG" width="490" height="653"/>
         <image name="camera_icon.png" width="512" height="512"/>
         <image name="check_mark.png" width="7855" height="7040"/>
         <image name="fb_icon.png" width="325" height="325"/>

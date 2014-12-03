@@ -14,6 +14,7 @@
 #import "MapaViewController.h"
 @interface FotoViewController (){
     NSString*palabra;
+    NSString*nospacestring;
 }
 
 @end
@@ -34,6 +35,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+  
     BOOL isCameraAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
     if(isCameraAvailable) {
         UIImagePickerController *picker = [[UIImagePickerController alloc]init];
@@ -56,8 +59,13 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    palabra=[palabra lowercaseString];
+    
+    NSArray* words = [palabra componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    nospacestring = [words componentsJoinedByString:@"+"];
     if([[segue identifier] isEqualToString:@"irMapa"]){
             [[segue destinationViewController] setCategoria:palabra];
+        [[segue destinationViewController] setBusqueda:nospacestring];
     }
     
 }
@@ -111,6 +119,7 @@
     NSDictionary* headers = @{@"X-Mashape-Key":@"evGDsuPOjemsh7rcxyGVnnNVZoZJp16Ecurjsno4pspMAHqplY",  @"Content-Type": @"application/x-www-form-urlencoded"};
     //NSError *error;
     // Call the API using Unirest
+    
     UNIUrlConnection *asyncConnection = [[UNIRest post:^(UNISimpleRequest *request) {
         [request setUrl:@"https://camfind.p.mashape.com/image_requests"];
         [request setHeaders:headers];
@@ -142,9 +151,11 @@
                 UIAlertView*alerta=[[UIAlertView alloc]initWithTitle:@"Error" message:@"No se pudo realizar la identificación, intente denuevo" delegate:self cancelButtonTitle:@"Aceptar" otherButtonTitles:nil];
                 [alerta show];
             }else{
-           self.palabrabusca.text=palabra;
-           self.aceptar.hidden=NO;
-                self.cancelar.hidden=NO;}
+     
+     self.palabrabusca.text=palabra;
+     self.aceptar.hidden=NO;
+     self.cancelar.hidden=NO;
+           }
         }];
     }];
     
