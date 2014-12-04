@@ -72,6 +72,12 @@
         busca=[favoritos objectAtIndex:indexpath.row];
         busca=[busca lowercaseString];
         
+        
+        busca = [[NSString alloc]
+                      initWithData:
+                      [busca dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES]
+                      encoding:NSASCIIStringEncoding];
+
         NSArray* words = [busca componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         nospacestring = [words componentsJoinedByString:@"+"];
         //nospacestring=[NSString stringWithFormat:@"\"%@\"", nospacestring];
